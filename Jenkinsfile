@@ -28,4 +28,22 @@ pipeline {
             }
         }
     }
+    node {
+        stage('Hello'){
+        echo 'Hello World'
+         }
+        stage('Code'){
+        echo 'Code'
+        }
+        
+        stage('Build') {
+            echo 'Build'
+        }
+        stage('Deploy') {
+        echo 'Deploy'
+        }
+        stage('Test') {
+        echo 'Build'
+       }
+  
 }
