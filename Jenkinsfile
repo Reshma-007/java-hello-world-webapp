@@ -27,12 +27,7 @@ pipeline {
              stages {
                  stage('maven build') {
                   steps {
-                          clean compile package
-                          bat "copy "target\java-hello-world.war" "C:\Users\hussa\Desktop\Deploy\apache-tomcat-9.0.64\webapps""
-                          bat "cd C:\Users\hussa\Desktop\Deploy\apache-tomcat-9.0.64\bin"
-                          bat ".\catalina.bat stop"
-                          bat ".\catalina.bat start"
-
+                          bat 'mvn clean compile package'
                         }
                  tools {
                          maven 'Maven-3.8.5'
