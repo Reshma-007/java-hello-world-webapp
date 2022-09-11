@@ -10,10 +10,10 @@ pipeline {
             }
 		steps {
 		bat ''' 
-copy "target\java-hello-world.war" "C:\Users\hussa\Desktop\Deploy\apache-tomcat-9.0.64\webapps"
-cd C:\Users\hussa\Desktop\Deploy\apache-tomcat-9.0.64\bin
-.\catalina.bat stop
-.\catalina.bat start
+copy "target/java-hello-world.war" "C:/Users/hussa/Desktop/Deploy/apache-tomcat-9.0.64/webapps"
+cd C:/Users/hussa/Desktop/Deploy/apache-tomcat-9.0.64/bin
+./catalina.bat stop
+./catalina.bat start
 '''
 	}	
 	}   
